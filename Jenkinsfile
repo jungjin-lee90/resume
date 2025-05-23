@@ -109,7 +109,7 @@ pipeline {
         	docker run -d \
           	--name ${params.IMAGE_NAME} \
           	--restart always \
-		--health-cmd="curl -f http://localhost || exit 1"
+		--health-cmd="curl -f http://localhost || exit 1" \
           	--health-interval=30s \
           	--health-timeout=5s \
           	--health-retries=3 \
